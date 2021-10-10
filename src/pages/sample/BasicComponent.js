@@ -3,7 +3,7 @@ import {Image, Text, TextInput, View} from 'react-native';
 
 export const BasicComponent = () => {
     return (
-        <View>
+        <View style={{borderWidth:1}}>
         <View style={{width:80, height:80, backgroundColor: '#0abde3'}} />
         <Photo />
         <Text>Andrian Ramadhan Febriana</Text>
