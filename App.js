@@ -8,6 +8,7 @@ import BasicStyling from './src/pages/sample/BasicStyling';
 import ComponentCommunication from './src/pages/sample/ComponentCommunication';
 import LifeCycleClass from './src/pages/sample/LifeCycleClass';
 import LifeCycleFunction from './src/pages/sample/LifeCycleFunction';
+import LoadSvg from './src/pages/sample/LoadSvg';
 import PropsDinamis from './src/pages/sample/PropsDinamis';
 import StateDinamis from './src/pages/sample/StateDinamis';
 
@@ -21,6 +22,8 @@ export const App = () => {
   return (
     <ScrollView>
       <View style={{padding: 20}}>
+        <Text>LoadSvg : </Text>
+        <LoadSvg />
         <Text>ComponentCommunication : </Text>
         <ComponentCommunication />
         <Text>StateDinamis : </Text>
