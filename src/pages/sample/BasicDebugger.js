@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 
 export default function BasicDebugger() {
-    console.log("ini basic debugger");
+    // console.log("ini basic debugger");
     return (
         <View style={{borderWidth:1}}>
             <Text>https://reactnative.dev/docs/debugging</Text>

@@ -6,6 +6,7 @@ import BasicLayouting from './src/pages/sample/BasicLayouting';
 import BasicPositioning from './src/pages/sample/BasicPositioning';
 import BasicStyling from './src/pages/sample/BasicStyling';
 import LifeCycleClass from './src/pages/sample/LifeCycleClass';
+import LifeCycleFunction from './src/pages/sample/LifeCycleFunction';
 
 export const App = () => {
   const [isShow, setIsShow] = useState(true);
@@ -17,6 +18,8 @@ export const App = () => {
   return (
     <ScrollView>
       <View style={{padding: 20}}>
+        <Text>LifeCycleFunction : </Text>
+        {isShow && <LifeCycleFunction />}
         <Text>LifeCycleClass : </Text>
         {isShow && <LifeCycleClass />}
         <Text>Basic Debugger : </Text>
