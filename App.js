@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Text, ScrollView, View} from 'react-native';
 import BasicComponent from './src/pages/sample/BasicComponent';
 import BasicDebugger from './src/pages/sample/BasicDebugger';
 import BasicLayouting from './src/pages/sample/BasicLayouting';
 import BasicPositioning from './src/pages/sample/BasicPositioning';
 import BasicStyling from './src/pages/sample/BasicStyling';
+import LifeCycleClass from './src/pages/sample/LifeCycleClass';
 
 export const App = () => {
+  const [isShow, setIsShow] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsShow(false);
+    }, 4000);
+  }, [])
   return (
     <ScrollView>
       <View style={{padding: 20}}>
+        <Text>LifeCycleClass : </Text>
+        {isShow && <LifeCycleClass />}
         <Text>Basic Debugger : </Text>
         <BasicDebugger />
         <Text>Basic Positioning : </Text>
