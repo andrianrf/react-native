@@ -5,6 +5,7 @@ import BasicDebugger from './src/pages/sample/BasicDebugger';
 import BasicLayouting from './src/pages/sample/BasicLayouting';
 import BasicPositioning from './src/pages/sample/BasicPositioning';
 import BasicStyling from './src/pages/sample/BasicStyling';
+import ComponentCommunication from './src/pages/sample/ComponentCommunication';
 import LifeCycleClass from './src/pages/sample/LifeCycleClass';
 import LifeCycleFunction from './src/pages/sample/LifeCycleFunction';
 import PropsDinamis from './src/pages/sample/PropsDinamis';
@@ -20,6 +21,8 @@ export const App = () => {
   return (
     <ScrollView>
       <View style={{padding: 20}}>
+        <Text>ComponentCommunication : </Text>
+        <ComponentCommunication />
         <Text>StateDinamis : </Text>
         <StateDinamis />
         <Text>PropsDinamis : </Text>
