@@ -15,7 +15,7 @@ export default function BasicPositioning() {
 }
 
 const styles = StyleSheet.create({
-  wrapper: {padding: 20, alignItems: 'center'},
+  wrapper: {padding: 20, alignItems: 'center', borderWidth:1},
   cartWrapper: {
     borderWidth: 1,
     borderColor: '#4398D1',
