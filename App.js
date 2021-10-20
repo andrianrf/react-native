@@ -8,6 +8,7 @@ import BasicStyling from './src/pages/sample/BasicStyling';
 import LifeCycleClass from './src/pages/sample/LifeCycleClass';
 import LifeCycleFunction from './src/pages/sample/LifeCycleFunction';
 import PropsDinamis from './src/pages/sample/PropsDinamis';
+import StateDinamis from './src/pages/sample/StateDinamis';
 
 export const App = () => {
   const [isShow, setIsShow] = useState(true);
@@ -19,6 +20,8 @@ export const App = () => {
   return (
     <ScrollView>
       <View style={{padding: 20}}>
+        <Text>StateDinamis : </Text>
+        <StateDinamis />
         <Text>PropsDinamis : </Text>
         <PropsDinamis />
         <Text>LifeCycleFunction : </Text>
