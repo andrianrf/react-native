@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {Text, ScrollView, View} from 'react-native';
 import BasicComponent from './src/pages/sample/BasicComponent';
 import BasicDebugger from './src/pages/sample/BasicDebugger';
+import BasicFetchAPI from './src/pages/sample/BasicFetchAPI';
 import BasicLayouting from './src/pages/sample/BasicLayouting';
 import BasicPositioning from './src/pages/sample/BasicPositioning';
 import BasicStyling from './src/pages/sample/BasicStyling';
@@ -22,6 +23,8 @@ export const App = () => {
   return (
     <ScrollView>
       <View style={{padding: 20}}>
+        <Text>BasicFetchAPI : </Text>
+        <BasicFetchAPI />
         <Text>LoadSvg : </Text>
         <LoadSvg />
         <Text>ComponentCommunication : </Text>
