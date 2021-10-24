@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Text, ScrollView, View} from 'react-native';
+import AxiosFetchAPI from './src/pages/sample/AxiosFetchAPI';
 import BasicComponent from './src/pages/sample/BasicComponent';
 import BasicDebugger from './src/pages/sample/BasicDebugger';
 import BasicFetchAPI from './src/pages/sample/BasicFetchAPI';
@@ -23,6 +24,8 @@ export const App = () => {
   return (
     <ScrollView>
       <View style={{padding: 20}}>
+        <Text>AxiosFetchAPI : </Text>
+        <AxiosFetchAPI />
         <Text>BasicFetchAPI : </Text>
         <BasicFetchAPI />
         <Text>LoadSvg : </Text>

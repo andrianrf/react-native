@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-import { Button, Image, StyleSheet, Text, View } from 'react-native'
+import axios from 'axios';
+import React, { useState } from 'react';
+import { Button, Image, StyleSheet, Text, View } from 'react-native';
 
-export default function BasicFetchAPI() {
+export default function AxiosFetchAPI() {
 
     const [dataUser, setDataUser] = useState({
         avatar: '',
@@ -11,12 +12,11 @@ export default function BasicFetchAPI() {
     })
 
     const getData = () => {
-        fetch('https://reqres.in/api/users/2')
-        .then(response => response.json())
-        .then(json => {
-            console.log(json);
-            setDataUser(json.data)
+        axios.get('https://reqres.in/api/users/2')
+        .then(result => {
+            setDataUser(result.data.data)
         })
+        .catch(err => console.log('err: ', err))
     }
 
     const postData = () => {
@@ -25,18 +25,11 @@ export default function BasicFetchAPI() {
             job: "leader"
         }
 
-        fetch('https://reqres.in/api/users',{
-            method: 'POST',
-            headers: {
-                'Content-Type' : 'application/json'
-            },
-            body: JSON.stringify(dataForAPI)
+        axios.post('https://reqres.in/api/users', dataForAPI)
+        .then(result => {
+            setDataPost(result.data)
         })
-        .then(response => response.json())
-        .then(json => {
-            console.log('post response: ',json)
-            setDataPost(json)
-        })
+        .catch(err => console.log('err: ', err))
     }
 
     const [dataPost, setDataPost] = useState({
