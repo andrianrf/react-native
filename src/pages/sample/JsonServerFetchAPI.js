@@ -2,7 +2,10 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Button, Image, StyleSheet, Text, View } from 'react-native';
 
-export default function AxiosFetchAPI() {
+export default function JsonServerFetchAPI() {
+
+    // npm install -g json-server
+    // json-server --watch "json-server/db.json" --port 3000
 
     const [dataUser, setDataUser] = useState({
         avatar: '',
@@ -12,10 +15,10 @@ export default function AxiosFetchAPI() {
     })
 
     const getData = () => {
-        axios.get('https://reqres.in/api/users/2')
+        axios.get('http://localhost:3000/users/2')
         .then(result => {
-            console.log(result.data.data)
-            setDataUser(result.data.data)
+            console.log(result.data)
+            setDataUser(result.data)
         })
         .catch(err => console.log('err: ', err))
     }

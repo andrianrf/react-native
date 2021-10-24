@@ -8,6 +8,7 @@ import BasicLayouting from './src/pages/sample/BasicLayouting';
 import BasicPositioning from './src/pages/sample/BasicPositioning';
 import BasicStyling from './src/pages/sample/BasicStyling';
 import ComponentCommunication from './src/pages/sample/ComponentCommunication';
+import JsonServerFetchAPI from './src/pages/sample/JsonServerFetchAPI';
 import LifeCycleClass from './src/pages/sample/LifeCycleClass';
 import LifeCycleFunction from './src/pages/sample/LifeCycleFunction';
 import LoadSvg from './src/pages/sample/LoadSvg';
@@ -24,6 +25,8 @@ export const App = () => {
   return (
     <ScrollView>
       <View style={{padding: 20}}>
+        <Text>JsonServerFetchAPI : </Text>
+        <JsonServerFetchAPI />
         <Text>AxiosFetchAPI : </Text>
         <AxiosFetchAPI />
         <Text>BasicFetchAPI : </Text>
